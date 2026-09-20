@@ -5,7 +5,7 @@
     "title": "La inteligencia artificial transforma la educación",
     "excerpt": "Innovación y herramientas digitales están cambiando la forma de aprender.",
     "date": "Publicado el 10 de septiembre de 2026 • 5 min de lectura",
-    "image": "./img/fotodeIA.jpg",
+    "image": "./informanews/img/fotodeIA.jpg",
     "body": [
       "La inteligencia artificial está transformando la educación mediante nuevas herramientas digitales.",
       "Las instituciones educativas incorporan soluciones de inteligencia artificial para personalizar el aprendizaje, facilitar el acceso a recursos y apoyar a estudiantes y docentes.",
@@ -19,7 +19,7 @@
     "title": "Destinos naturales para descubrir Colombia",
     "excerpt": "Experiencias únicas para disfrutar paisajes y cultura.",
     "date": "Publicado el 20 de septiembre de 2026 • 4 min de lectura",
-    "image": "./img/turismo1.jpg",
+    "image": "./informanews/img/turismo1.jpg",
     "body": [
       "Colombia cuenta con una riqueza natural insuperable que atrae a miles de turistas cada año.",
       "Desde los valles andinos hasta las selvas y playas caribeñas, los emprendimientos locales promueven un turismo sostenible y consciente.",
@@ -33,7 +33,7 @@
     "title": "Nuevas herramientas para estudiantes",
     "excerpt": "Recursos digitales que facilitan el aprendizaje.",
     "date": "Publicado el 05 de septiembre de 2026 • 3 min de lectura",
-    "image": "./img/herramientas.jpg",
+    "image": "./informanews/img/herramientas.jpg",
     "body": [
       "El ecosistema educativo actual cuenta con infinidad de recursos en línea orientados al estudio autónomo.",
       "Plataformas interactivas y bibliotecas virtuales están democratizando la educación superior e informal en toda la región.",
@@ -47,7 +47,7 @@
     "title": "El crecimiento de los emprendimientos digitales",
     "excerpt": "Estrategias e innovación en el e-commerce moderno.",
     "date": "Publicado el 01 de septiembre de 2026 • 6 min de lectura",
-    "image": "./img/comercio.jpg",
+    "image": "./informanews/img/comercio.jpg",
     "body": [
       "Las marcas locales han escalado ventas gracias a la integración de pasarelas de pago y marketplaces.",
       "El comercio digital en Colombia sigue mostrando tasas de crecimiento destacadas frente a años anteriores.",
@@ -61,7 +61,7 @@
     "title": "Ciudades inteligentes y tecnología",
     "excerpt": "Infraestructura urbana adaptada a la era digital.",
     "date": "Publicado el 28 de agosto de 2026 • 5 min de lectura",
-    "image": "./img/ciudadia.jpg",
+    "image": "./informanews/img/ciudadia.jpg",
     "body": [
       "El monitoreo de tráfico, optimización de energía y gestión de residuos están adoptando IoT.",
       "Grandes metrópolis implementan sensores para responder eficientemente a los retos de sostenibilidad.",
@@ -75,7 +75,7 @@
     "title": "Experiencias únicas de viaje",
     "excerpt": "Guías para viajeros amantes de la aventura y cultura.",
     "date": "Publicado el 25 de agosto de 2026 • 4 min de lectura",
-    "image": "./img/turismo2.jpg",
+    "image": "./informanews/img/turismo2.jpg",
     "body": [
       "Viajar ya no es solo visitar lugares, sino conectarse con las raíces e historias locales.",
       "El turismo comunitario gana terreno ofreciendo experiencias gastronómicas e inmersivas auténticas.",
