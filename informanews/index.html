@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Metadatos Básicos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INFORMANEWS - Noticias y Tendencias</title>
+
+    <!-- Tailwind CSS desde CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Iconos FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Fuente Tipográfica Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Hoja de Estilos Personalizada -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="min-h-screen flex flex-col justify-between antialiased selection:bg-blue-600 selection:text-white">
+
+    <!-- =========================================================================
+         ENCABEZADO Y BARRA DE NAVEGACIÓN (HEADER & NAV)
+    ========================================================================== -->
+    <header class="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                
+                <!-- Logotipo Principal -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" onclick="navigateTo('home'); return false;" class="text-2xl font-extrabold tracking-tight text-blue-600 flex items-center gap-1">
+                        INFORMANEWS
+                    </a>
+                </div>
+
+                <!-- Menú de Navegación Escritorio -->
+                <nav class="hidden md:flex space-x-8 text-sm font-medium text-gray-600">
+                    <button id="nav-home" onclick="navigateTo('home')" class="hover:text-black transition-colors active-nav py-2">Inicio</button>
+                    <button id="nav-news" onclick="navigateTo('news')" class="hover:text-black transition-colors py-2">Noticias</button>
+                    <button id="nav-categories" onclick="navigateTo('categories')" class="hover:text-black transition-colors py-2">Categorías</button>
+                    <button id="nav-favorites" onclick="navigateTo('favorites')" class="hover:text-black transition-colors py-2 flex items-center gap-1">
+                        Favoritos <i id="fav-counter-icon" class="far fa-heart text-xs"></i>
+                        <span id="fav-count-badge" class="hidden bg-blue-600 text-white text-xs px-1.5 py-0.5 rounded-full">0</span>
+                    </button>
+                    <button id="nav-contact" onclick="navigateTo('contact')" class="hover:text-black transition-colors py-2">Contacto</button>
+                </nav>
+
+                <!-- Botón de Acción Header -->
+                <div class="hidden md:flex items-center">
+                    <button onclick="navigateTo('news')" class="bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-5 py-2.5 rounded-lg shadow-sm transition-all duration-200 hover:shadow">
+                        Explorar noticias
+                    </button>
+                </div>
+
+                <!-- Botón Hamburguesa para Dispositivos Móviles -->
+                <div class="md:hidden flex items-center">
+                    <button type="button" onclick="toggleMobileMenu()" class="text-gray-600 hover:text-gray-900 focus:outline-none p-2" aria-label="Abrir menú">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Menú Desplegable Móvil -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200 px-4 pt-2 pb-4 space-y-2">
+            <button onclick="navigateTo('home'); toggleMobileMenu()" class="block w-full text-left py-2 font-medium text-gray-700 hover:text-blue-600">Inicio</button>
+            <button onclick="navigateTo('news'); toggleMobileMenu()" class="block w-full text-left py-2 font-medium text-gray-700 hover:text-blue-600">Noticias</button>
+            <button onclick="navigateTo('categories'); toggleMobileMenu()" class="block w-full text-left py-2 font-medium text-gray-700 hover:text-blue-600">Categorías</button>
+            <button onclick="navigateTo('favorites'); toggleMobileMenu()" class="block w-full text-left py-2 font-medium text-gray-700 hover:text-blue-600">Favoritos</button>
+            <button onclick="navigateTo('contact'); toggleMobileMenu()" class="block w-full text-left py-2 font-medium text-gray-700 hover:text-blue-600">Contacto</button>
+            <button onclick="navigateTo('news'); toggleMobileMenu()" class="w-full mt-2 bg-blue-600 text-white py-2.5 rounded-lg font-semibold text-center">Explorar noticias</button>
+        </div>
+    </header>
+
+    <!-- =========================================================================
+         CONTENEDOR PRINCIPAL DE PÁGINAS / VISTAS (MAIN CONTENT)
+    ========================================================================== -->
+    <main class="flex-grow">
+        
+        <!-- VISTA 1: INICIO (HOME) -->
+        <section id="page-home" class="view-page max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12">
+            
+            <!-- Banner Hero Principal -->
+            <div class="bg-[#0e172a] rounded-3xl p-8 sm:p-12 lg:p-16 text-white shadow-xl relative overflow-hidden">
+                <div class="max-w-2xl relative z-10 space-y-6">
+                    <span class="inline-block text-xs font-bold tracking-widest text-blue-400 uppercase">
+                        INFORMACIÓN QUE TE CONECTA
+                    </span>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        Noticias que importan.
+                    </h1>
+                    <p class="text-gray-300 text-lg leading-relaxed">
+                        Explora noticias y experiencias educativas, tecnológicas, turísticas y comerciales.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-2">
+                        <button onclick="navigateTo('news')" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl shadow-md transition-all">
+                            Explorar noticias
+                        </button>
+                        <button onclick="navigateTo('contact')" class="bg-white text-gray-900 hover:bg-gray-100 font-semibold px-6 py-3 rounded-xl transition-all">
+                            Contáctanos
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grilla de Noticias Destacadas -->
+            <div class="space-y-6">
+                <div>
+                    <h2 class="text-3xl font-extrabold text-gray-900">Noticias destacadas</h2>
+                    <p class="text-gray-500 text-sm mt-1">Las historias más relevantes de hoy</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="featured-news-grid">
+                    <!-- Las tarjetas se renderizan dinámicamente desde script.js -->
+                </div>
+            </div>
+
+            <!-- Bloque Explorar Categorías -->
+            <div class="bg-[#eaf3ff] rounded-2xl p-8 sm:p-10 space-y-4" id="vercategorias">
+                <h3 class="text-2xl font-bold text-gray-900">Explora nuestras categorías</h3>
+                <p class="text-gray-600">Encuentra contenido según tus intereses.</p>
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <button onclick="filterByCategory('EDUCACIÓN')" class="text-blue-600 font-bold hover:underline tracking-wide uppercase text-sm">EDUCACIÓN</button>
+                    <button onclick="filterByCategory('TECNOLOGÍA')" class="text-blue-600 font-bold hover:underline tracking-wide uppercase text-sm">TECNOLOGÍA</button>
+                    <button onclick="filterByCategory('TURISMO')" class="text-blue-600 font-bold hover:underline tracking-wide uppercase text-sm">TURISMO</button>
+                    <button onclick="filterByCategory('COMERCIO')" class="text-blue-600 font-bold hover:underline tracking-wide uppercase text-sm">COMERCIO</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- VISTA 2: LISTADO DE NOTICIAS -->
+        <section id="page-news" class="view-page hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+            <div>
+                <h1 id="news-title" class="text-4xl font-extrabold text-gray-900">Últimas noticias</h1>
+                <p id="news-subtitle" class="text-gray-500 mt-2">Explora información de actualidad por categoría.</p>
+            </div>
+
+            <!-- Barra de Búsqueda y Filtro por Categorías -->
+            <div class="flex flex-col sm:flex-row gap-4">
+                <div class="relative flex-grow">
+                    <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                    <input type="text" id="search-input" onkeyup="handleFilter()" placeholder="Buscar noticias..." 
+                           class="w-full pl-11 pr-4 py-3 bg-white rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm transition">
+                </div>
+                <div class="sm:w-64">
+                    <select id="category-filter" onchange="handleFilter()" 
+                            class="w-full px-4 py-3 bg-white rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 shadow-sm text-gray-700 font-medium">
+                        <option value="ALL">Todas las categorías</option>
+                        <option value="TECNOLOGÍA">Tecnología</option>
+                        <option value="TURISMO">Turismo</option>
+                        <option value="EDUCACIÓN">Educación</option>
+                        <option value="COMERCIO">Comercio</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Contenedor del Listado de Noticias -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="all-news-grid">
+                <!-- Se inyectan dinámicamente con JavaScript -->
+            </div>
+        </section>
+
+        <!-- VISTA 3: NUEVA SECCIÓN CATEGORÍAS -->
+        <section id="page-categories" class="view-page hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+            <div>
+                <h1 class="text-4xl font-extrabold text-gray-900">Explore nuestras Categorías</h1>
+                <p class="text-gray-500 mt-2">Filtra y explora las publicaciones agrupadas por temas de tu interés.</p>
+            </div>
+
+            <!-- Accesos rápidos a Categorías -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                <button onclick="filterByCategory('TECNOLOGÍA')" class="p-4 bg-white border border-gray-200 hover:border-blue-500 rounded-2xl shadow-sm text-center transition-all group">
+                    <i class="fas fa-laptop-code text-2xl text-blue-600 mb-2 group-hover:scale-110 transition-transform"></i>
+                    <p class="font-bold text-gray-800 text-sm">Tecnología</p>
+                </button>
+                <button onclick="filterByCategory('TURISMO')" class="p-4 bg-white border border-gray-200 hover:border-blue-500 rounded-2xl shadow-sm text-center transition-all group">
+                    <i class="fas fa-plane-departure text-2xl text-blue-600 mb-2 group-hover:scale-110 transition-transform"></i>
+                    <p class="font-bold text-gray-800 text-sm">Turismo</p>
+                </button>
+                <button onclick="filterByCategory('EDUCACIÓN')" class="p-4 bg-white border border-gray-200 hover:border-blue-500 rounded-2xl shadow-sm text-center transition-all group">
+                    <i class="fas fa-graduation-cap text-2xl text-blue-600 mb-2 group-hover:scale-110 transition-transform"></i>
+                    <p class="font-bold text-gray-800 text-sm">Educación</p>
+                </button>
+                <button onclick="filterByCategory('COMERCIO')" class="p-4 bg-white border border-gray-200 hover:border-blue-500 rounded-2xl shadow-sm text-center transition-all group">
+                    <i class="fas fa-store text-2xl text-blue-600 mb-2 group-hover:scale-110 transition-transform"></i>
+                    <p class="font-bold text-gray-800 text-sm">Comercio</p>
+                </button>
+            </div>
+
+            <!-- Listado filtrado para Categorías -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="categories-news-grid">
+                <!-- Se inyectan dinámicamente con JavaScript -->
+            </div>
+        </section>
+
+        <!-- VISTA 4: DETALLE DE NOTICIA -->
+        <section id="page-detail" class="view-page hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+            <!-- Botón para Regresar -->
+            <button onclick="navigateTo('news')" class="inline-flex items-center text-blue-600 font-semibold hover:underline">
+                <i class="fas fa-arrow-left mr-2"></i> Volver a noticias
+            </button>
+
+            <!-- Encabezado de la Noticia -->
+            <div class="space-y-3">
+                <span id="detail-category" class="text-sm font-bold text-blue-600 uppercase tracking-wider">TECNOLOGÍA</span>
+                <h1 id="detail-title" class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight">
+                    La inteligencia artificial transforma la educación
+                </h1>
+                <p id="detail-meta" class="text-gray-500 text-sm">
+                    Publicado el 10 de septiembre de 2026 • 5 min de lectura
+                </p>
+            </div>
+
+            <!-- Imagen Representativa -->
+            <div class="rounded-3xl overflow-hidden shadow-md bg-gray-100 max-h-[420px] relative">
+                <img id="detail-image" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80" 
+                     alt="Imagen Representativa" class="w-full h-[420px] object-cover">
+                <div class="absolute inset-0 bg-black/10 flex items-center justify-center pointer-events-none">
+                    <span class="text-white text-opacity-80 font-bold text-xl tracking-widest uppercase bg-black/30 px-6 py-2 rounded-full border border-white/20">
+                        IMAGEN REPRESENTATIVA
+                    </span>
+                </div>
+            </div>
+
+            <!-- Contenido Principal y Barra Lateral -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 pt-4">
+                <!-- Cuerpo del Artículo -->
+                <div class="lg:col-span-2 space-y-6 text-gray-700 text-lg leading-relaxed" id="detail-body">
+                    <!-- El cuerpo del artículo se carga dinámicamente -->
+                </div>
+
+                <!-- Barra Lateral con Botones de Acción -->
+                <div class="space-y-4">
+                    <button id="detail-fav-btn" onclick="toggleDetailFavorite()" 
+                            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3.5 px-6 rounded-xl shadow transition-all flex items-center justify-center gap-2">
+                        <i id="detail-fav-icon" class="far fa-heart"></i>
+                        <span id="detail-fav-text">Agregar a favoritos</span>
+                    </button>
+                    
+                    <button onclick="navigateTo('contact')" 
+                            class="w-full bg-white hover:bg-gray-50 text-blue-600 font-semibold py-3.5 px-6 rounded-xl border border-gray-200 shadow-sm transition-all text-center block">
+                        Contactar
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- VISTA 5: FORMULARIO DE CONTACTO Y VALIDACIONES -->
+        <section id="page-contact" class="view-page hidden max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+            <div>
+                <h1 class="text-4xl font-extrabold text-gray-900">Contáctanos</h1>
+                <p class="text-gray-500 mt-2">¿Tienes una pregunta, sugerencia o quieres compartir una noticia?</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Formulario de Contacto -->
+                <div class="lg:col-span-2 bg-white rounded-3xl p-6 sm:p-10 shadow-sm border border-gray-100">
+                    <form id="contact-form" onsubmit="submitForm(event)" class="space-y-6" novalidate>
+                        
+                        <!-- Campo: Nombre Completo -->
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-gray-800" for="input-name">Nombre completo *</label>
+                            <input type="text" id="input-name" oninput="validateFormLive()" placeholder="Escribe tu nombre" 
+                                   class="w-full px-4 py-3.5 bg-gray-50 rounded-xl border border-gray-200 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800 transition">
+                        </div>
+
+                        <!-- Campo: Correo Electrónico -->
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-gray-800" for="input-email">Correo electrónico *</label>
+                            <input type="email" id="input-email" oninput="validateFormLive()" placeholder="correo@ejemplo.com" 
+                                   class="w-full px-4 py-3.5 bg-gray-50 rounded-xl border border-gray-200 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800 transition">
+                        </div>
+
+                        <!-- Campo: Asunto -->
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-gray-800" for="input-subject">Asunto *</label>
+                            <input type="text" id="input-subject" oninput="validateFormLive()" placeholder="Motivo del contacto" 
+                                   class="w-full px-4 py-3.5 bg-gray-50 rounded-xl border border-gray-200 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800 transition">
+                        </div>
+
+                        <!-- Campo: Mensaje -->
+                        <div class="space-y-2">
+                            <label class="block text-sm font-bold text-gray-800" for="input-message">Mensaje *</label>
+                            <textarea id="input-message" oninput="validateFormLive()" rows="5" placeholder="Escribe tu mensaje..." 
+                                      class="w-full px-4 py-3.5 bg-gray-50 rounded-xl border border-gray-200 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-800 transition resize-none"></textarea>
+                        </div>
+
+                        <!-- Botón de Envío -->
+                        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl shadow-md transition-all duration-200">
+                            Enviar mensaje
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Panel de Validaciones en Vivo -->
+                <div class="bg-[#eaf3ff] rounded-3xl p-6 sm:p-8 h-fit space-y-4">
+                    <h2 class="text-xl font-bold text-gray-900">Validaciones</h2>
+                    <div id="validation-box" class="space-y-2 text-sm text-gray-600">
+                        <p class="text-gray-500 flex items-center gap-2">
+                            <i class="fas fa-info-circle text-blue-500"></i> Complete los campos marcados con (*) para enviar su mensaje.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =========================================================================
+         PIE DE PÁGINA (FOOTER)
+    ========================================================================== -->
+    <footer class="bg-[#0e172a] text-white pt-12 pb-16 mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                
+                <!-- Columna 1: Información de la Marca -->
+                <div class="space-y-4">
+                    <a href="#" onclick="navigateTo('home'); return false;" class="text-2xl font-extrabold tracking-tight text-white block">
+                        INFORMANEWS
+                    </a>
+                    <p class="text-gray-400 text-sm max-w-sm leading-relaxed">
+                        Información, experiencias y tendencias en un solo lugar.
+                    </p>
+                </div>
+
+                <!-- Columna 2: Menú de Navegación del Footer -->
+                <div class="space-y-3">
+                    <h4 class="font-bold text-white text-base">Navegación</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><button onclick="navigateTo('home')" class="hover:text-white transition">Inicio</button></li>
+                        <li><button onclick="navigateTo('news')" class="hover:text-white transition">Noticias</button></li>
+                        <li><button onclick="navigateTo('categories')" class="hover:text-white transition">Categorías</button></li>
+                        <li><button onclick="navigateTo('favorites')" class="hover:text-white transition">Favoritos</button></li>
+                        <li><button onclick="navigateTo('contact')" class="hover:text-white transition">Contacto</button></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Información de Contacto -->
+                <div class="space-y-3 text-sm text-gray-400">
+                    <h4 class="font-bold text-white text-base">Contacto</h4>
+                    <p>contacto@informanews.com.co</p>
+                    <p>Bogotá, Colombia</p>
+                    <p class="pt-2 text-xs text-gray-500">© 2026 Armando Obando</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Carga del Script JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

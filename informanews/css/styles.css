@@ -1,0 +1,29 @@
+/* ==========================================================================
+   ESTILOS PERSONALIZADOS - INFORMANEWS
+   ========================================================================== */
+
+/* Tipografía global predeterminada */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+}
+
+/* Estado activo para botones de navegación */
+.active-nav {
+    font-weight: 700;
+    color: #000000;
+}
+
+/* Recorte de texto a 2 líneas para tarjetas */
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Transiciones genéricas de elementos interactivos */
+.transition-all-custom {
+    transition: all 0.25s ease-in-out;
+}

@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "category": "TECNOLOGÍA",
+    "title": "La inteligencia artificial transforma la educación",
+    "excerpt": "Innovación y herramientas digitales están cambiando la forma de aprender.",
+    "date": "Publicado el 10 de septiembre de 2026 • 5 min de lectura",
+    "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80",
+    "body": [
+      "La inteligencia artificial está transformando la educación mediante nuevas herramientas digitales.",
+      "Las instituciones educativas incorporan soluciones de inteligencia artificial para personalizar el aprendizaje, facilitar el acceso a recursos y apoyar a estudiantes y docentes.",
+      "Estas tecnologías ofrecen oportunidades, pero requieren un uso responsable y ético."
+    ],
+    "featured": true
+  },
+  {
+    "id": 2,
+    "category": "TURISMO",
+    "title": "Destinos naturales para descubrir Colombia",
+    "excerpt": "Experiencias únicas para disfrutar paisajes y cultura.",
+    "date": "Publicado el 08 de septiembre de 2026 • 4 min de lectura",
+    "image": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
+    "body": [
+      "Colombia cuenta con una riqueza natural insuperable que atrae a miles de turistas cada año.",
+      "Desde los valles andinos hasta las selvas y playas caribeñas, los emprendimientos locales promueven un turismo sostenible y consciente.",
+      "Visitar estos destinos impulsa el desarrollo de las comunidades locales de forma respetuosa con la naturaleza."
+    ],
+    "featured": true
+  },
+  {
+    "id": 3,
+    "category": "EDUCACIÓN",
+    "title": "Nuevas herramientas para estudiantes",
+    "excerpt": "Recursos digitales que facilitan el aprendizaje.",
+    "date": "Publicado el 05 de septiembre de 2026 • 3 min de lectura",
+    "image": "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=600&q=80",
+    "body": [
+      "El ecosistema educativo actual cuenta con infinidad de recursos en línea orientados al estudio autónomo.",
+      "Plataformas interactivas y bibliotecas virtuales están democratizando la educación superior e informal en toda la región.",
+      "Aprovechar estas herramientas permite potenciar habilidades clave para las demandas del mercado actual."
+    ],
+    "featured": true
+  },
+  {
+    "id": 4,
+    "category": "COMERCIO",
+    "title": "El crecimiento de los emprendimientos digitales",
+    "excerpt": "Estrategias e innovación en el e-commerce moderno.",
+    "date": "Publicado el 01 de septiembre de 2026 • 6 min de lectura",
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80",
+    "body": [
+      "Las marcas locales han escalado ventas gracias a la integración de pasarelas de pago y marketplaces.",
+      "El comercio digital en Colombia sigue mostrando tasas de crecimiento destacadas frente a años anteriores.",
+      "Las redes sociales son ahora vitrinas directas indispensables para cualquier modelo de negocio."
+    ],
+    "featured": false
+  },
+  {
+    "id": 5,
+    "category": "TECNOLOGÍA",
+    "title": "Ciudades inteligentes y tecnología",
+    "excerpt": "Infraestructura urbana adaptada a la era digital.",
+    "date": "Publicado el 28 de agosto de 2026 • 5 min de lectura",
+    "image": "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=600&q=80",
+    "body": [
+      "El monitoreo de tráfico, optimización de energía y gestión de residuos están adoptando IoT.",
+      "Grandes metrópolis implementan sensores para responder eficientemente a los retos de sostenibilidad.",
+      "La conectividad 5G actúa como el motor principal de estas innovaciones urbanas."
+    ],
+    "featured": false
+  },
+  {
+    "id": 6,
+    "category": "TURISMO",
+    "title": "Experiencias únicas de viaje",
+    "excerpt": "Guías para viajeros amantes de la aventura y cultura.",
+    "date": "Publicado el 25 de agosto de 2026 • 4 min de lectura",
+    "image": "https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=600&q=80",
+    "body": [
+      "Viajar ya no es solo visitar lugares, sino conectarse con las raíces e historias locales.",
+      "El turismo comunitario gana terreno ofreciendo experiencias gastronómicas e inmersivas auténticas.",
+      "Recomendaciones y consejos útiles para planificar tu próximo viaje de bajo impacto ambiental."
+    ],
+    "featured": false
+  }
+]
